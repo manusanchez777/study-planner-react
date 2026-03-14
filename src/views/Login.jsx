@@ -3,3 +3,4 @@ function Login() {
 }
 
 export default Login;
+//esta es la vista de login, aun no tiene funcionalidad//

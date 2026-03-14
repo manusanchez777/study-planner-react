@@ -26,3 +26,4 @@ function App() {
 }
 
 export default App; 
+//este es el componente principal de la aplicacion, aqui definimos las rutas y se importan los componentes principales que vamos a usar//

@@ -8,3 +8,4 @@ function TaskCard({ title, subject }) {
 }
 
 export default TaskCard;
+//este es el componente para mostrar las tareas//

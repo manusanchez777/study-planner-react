@@ -3,3 +3,4 @@ function Register() {
 }
 
 export default Register;
+//esta es la vista de registro//

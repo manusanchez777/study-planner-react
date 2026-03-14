@@ -1,6 +1,6 @@
 :root {
-    --bg-color: #f4f6fb;
-    --text-color: #2d3436;
+    --bg-color: #ffffff;
+    --text-color: #ffffff;
     --primary-color: #6c5ce7;
     --nav-bg: white;
 }
@@ -21,30 +21,32 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    /* Imagen de fondo a nivel de body para que cubra toda la página */
-    background-image: url('/imagnes/study_fondo2.png');
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('./study_fondo1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Layout: asegurar que el footer se sitúe al final */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Capa oscura global sobre la imagen de fondo */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    pointer-events: none;
-    z-index: 0;
+#root {
+    min-height: 100vh;
 }
 
-/* Fondo específico para la página de login */
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-content {
+    flex: 1 0 auto;
+}
+
+
 .login-bg {
-    background-image: url('/imagnes/logo_study.png') !important;
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('./study_fondo1.png') !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +61,7 @@ body::before {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* aqui esta para poner en modo ocuro la pàg */
+
 body.dark {
     background-color: #121218;
     color: #e6e6ef;
@@ -69,7 +71,7 @@ body.dark h1 {
     color: #a29bfe;
 }
 
-/* Theme dropdown styles */
+
 .theme-dropdown {
     position: relative;
     display: inline-block;
@@ -116,12 +118,12 @@ body.dark h1 {
     background: rgba(0,0,0,0.04);
 }
 
-/* Dark adjustments for dropdown */
+
 body.dark .dropdown-menu {
     background: #1b1b22;
 }
 
-/* Asegurar que la navegación y controles queden por encima de la capa oscura */
+
 .navbar,
 .nav-actions,
 .logo,
@@ -148,17 +150,17 @@ footer {
     padding: 120px 20px;
     position: relative;
     min-height: 60vh;
-    flex: 1 0 auto; /* permitir que el hero expanda y empuje el footer abajo */
+    flex: 1 0 auto; 
 }
 
-/* Login page specific layout */
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 80px 20px;
     position: relative;
-    z-index: 2; /* por encima de la capa global */
+    z-index: 2; 
 }
 
 .auth-card {
@@ -168,7 +170,7 @@ footer {
     width: 420px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     position: relative;
-    z-index: 3; /* asegurar que quede encima de la overlay */
+    z-index: 3; 
     backdrop-filter: blur(6px);
 }
 
@@ -198,7 +200,6 @@ footer {
     border: 1px solid #ddd;
 }
 
-/* Alert messages */
 .alert {
     padding: 10px 12px;
     border-radius: 6px;
@@ -216,21 +217,20 @@ footer {
     border: 1px solid rgba(220, 53, 69, 0.18);
 }
 
-/* Field inline errors */
 .field-error {
     color: #b02a37;
     font-size: 13px;
     margin-top: 6px;
 }
 
-/* Botón Entrar ocupa la mitad del ancho del login-card y centrado */
+
 .login-card .btn {
     display: block;
     width: 50%;
     margin: 14px auto 0 auto;
 }
 
-/* Forzar texto claro en la sección login cuando el fondo sea oscuro */
+
 .login-card,
 .login-card p,
 .login-card label {
@@ -242,21 +242,18 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Overlay para oscurecer la imagen de fondo y resaltar el texto */
-/* Asegurar que el contenido esté por encima de la capa global */
+
 .hero > * {
     position: relative;
     z-index: 1;
 }
 
-/* Forzar texto claro en la sección hero para contraste en modo claro */
 .hero h1,
 .hero p,
 .hero .btn {
     color: #ffffff;
 }
 
-/* Hacer el footer transparente para que la imagen se vea detrás */
 footer {
     background-color: transparent;
 }
@@ -294,9 +291,13 @@ footer {
     font-size: 14px;
     background-color: transparent;
     width: 100%;
-    flex-shrink: 0; /* siempre visible al final */
+    flex-shrink: 0; 
 }
-/* Color blanco para el texto del footer y enlaces dentro del footer */
+
+.app-shell .footer {
+    margin-top: auto;
+}
+
 footer,
 footer p,
 footer a {
@@ -350,7 +351,7 @@ footer a {
 .input-group input {
     padding: 10px;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
 }
 
 .input-group input:focus {
